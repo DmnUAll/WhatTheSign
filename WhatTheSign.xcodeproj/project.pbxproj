@@ -15,6 +15,7 @@
 		61DBE5E028AA558A00337A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5DE28AA558A00337A15 /* LaunchScreen.storyboard */; };
 		61DBE5EC28AA560000337A15 /* Signs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5EB28AA560000337A15 /* Signs.plist */; };
 		61DBE5EE28AA56CC00337A15 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5ED28AA56CC00337A15 /* Sign.swift */; };
+		61DBE5F028AB897600337A15 /* SignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5EF28AB897600337A15 /* SignTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		61DBE5E128AA558A00337A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61DBE5EB28AA560000337A15 /* Signs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Signs.plist; sourceTree = "<group>"; };
 		61DBE5ED28AA56CC00337A15 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
+		61DBE5EF28AB897600337A15 /* SignTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		61DBE5E728AA559500337A15 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61DBE5EF28AB897600337A15 /* SignTableViewCell.swift */,
 				61DBE5D728AA558800337A15 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61DBE5D828AA558800337A15 /* ViewController.swift in Sources */,
+				61DBE5F028AB897600337A15 /* SignTableViewCell.swift in Sources */,
 				61DBE5D428AA558800337A15 /* AppDelegate.swift in Sources */,
 				61DBE5EE28AA56CC00337A15 /* Sign.swift in Sources */,
 				61DBE5D628AA558800337A15 /* SceneDelegate.swift in Sources */,
@@ -329,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WTLW784B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WhatTheSign/Info.plist;
+				INFOPLIST_FILE = "WhatTheSign/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -357,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WTLW784B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WhatTheSign/Info.plist;
+				INFOPLIST_FILE = "WhatTheSign/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
