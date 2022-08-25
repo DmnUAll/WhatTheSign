@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		613EC56828B643FB00DF3608 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613EC56728B643FB00DF3608 /* DetailsViewController.swift */; };
+		613EC56C28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 613EC56B28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel */; };
 		61DBE5D428AA558800337A15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5D328AA558800337A15 /* AppDelegate.swift */; };
 		61DBE5D628AA558800337A15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5D528AA558800337A15 /* SceneDelegate.swift */; };
-		61DBE5D828AA558800337A15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5D728AA558800337A15 /* ViewController.swift */; };
+		61DBE5D828AA558800337A15 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5D728AA558800337A15 /* MainViewController.swift */; };
 		61DBE5DB28AA558800337A15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5D928AA558800337A15 /* Main.storyboard */; };
 		61DBE5DD28AA558A00337A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5DC28AA558A00337A15 /* Assets.xcassets */; };
 		61DBE5E028AA558A00337A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5DE28AA558A00337A15 /* LaunchScreen.storyboard */; };
@@ -19,10 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		613EC56728B643FB00DF3608 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		613EC56B28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RoadSignImageClassifier.mlmodel; sourceTree = "<group>"; };
 		61DBE5D028AA558800337A15 /* WhatTheSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatTheSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DBE5D328AA558800337A15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DBE5D528AA558800337A15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		61DBE5D728AA558800337A15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		61DBE5D728AA558800337A15 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		61DBE5DA28AA558800337A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61DBE5DC28AA558A00337A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61DBE5DF28AA558A00337A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				61DBE5EF28AB897600337A15 /* SignTableViewCell.swift */,
-				61DBE5D728AA558800337A15 /* ViewController.swift */,
+				61DBE5D728AA558800337A15 /* MainViewController.swift */,
+				613EC56728B643FB00DF3608 /* DetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				61DBE5EB28AA560000337A15 /* Signs.plist */,
+				613EC56B28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel */,
 				61DBE5ED28AA56CC00337A15 /* Sign.swift */,
 			);
 			path = Model;
@@ -180,11 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DBE5D828AA558800337A15 /* ViewController.swift in Sources */,
+				61DBE5D828AA558800337A15 /* MainViewController.swift in Sources */,
 				61DBE5F028AB897600337A15 /* SignTableViewCell.swift in Sources */,
+				613EC56C28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel in Sources */,
 				61DBE5D428AA558800337A15 /* AppDelegate.swift in Sources */,
 				61DBE5EE28AA56CC00337A15 /* Sign.swift in Sources */,
 				61DBE5D628AA558800337A15 /* SceneDelegate.swift in Sources */,
+				613EC56828B643FB00DF3608 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

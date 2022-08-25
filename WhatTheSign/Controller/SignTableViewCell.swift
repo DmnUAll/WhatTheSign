@@ -15,7 +15,10 @@ class SignTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        signImage.layer.cornerRadius = signImage.bounds.size.height / 5
+        signImage.layer.borderWidth = 1.5
+        signImage.layer.borderColor = UIColor.black.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

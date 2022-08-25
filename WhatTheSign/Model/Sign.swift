@@ -11,6 +11,5 @@ struct Sign {
     
     static let signCategory = ["Предупреждающие знаки", "Знаки приоритета", "Запрещающие знаки", "Предписывающие знаки", "Знаки особых предписаний", "Информационные знаки", "Знаки сервиса", "Знаки дополнительной информации (таблички)"]
     
-    let signNumber: Double
-    var signDescription: String
+    static var guessedSign: [String: String]?
 }
