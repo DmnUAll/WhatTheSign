@@ -15,17 +15,18 @@ class MainViewController: UIViewController {
     var signsArray = [[String: String]]()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
         
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = true
         
-        let path = Bundle.main.path(forResource: "Signs", ofType: "plist")!
-        guard let data = NSArray(contentsOfFile: path) as? Array<[String: String]> else { return }
-        signsArray = data
+        getData()
         //print(signsArray)
     }
     
@@ -43,7 +44,7 @@ class MainViewController: UIViewController {
 
         alert.setValue(controller, forKey: "contentViewController")
 
-        let height: NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150)
+        let height: NSLayoutConstraint = NSLayoutConstraint(item: alert.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150)
         alert.view.addConstraint(height)
 
         let attributedString = NSMutableAttributedString(string: "https://github.com/DmnUAll/WhatTheSign")
@@ -94,6 +95,22 @@ class MainViewController: UIViewController {
             destinationVC.nameData = Sign.guessedSign?["signName"] ?? "Не определено"
             destinationVC.numberData = Sign.guessedSign?["signNumber"] ?? "Не определено"
         default: return
+        }
+    }
+    
+    func getData() {
+        let path = Bundle.main.path(forResource: "Signs", ofType: "plist")!
+        guard let data = NSArray(contentsOfFile: path) as? Array<[String: String]> else { return }
+        signsArray = data
+    }
+    
+    func updateTable() {
+        if searchBar.text != "" {
+            signsArray = signsArray.filter{$0["signName"]!.lowercased().contains("\(searchBar.text!.lowercased())")}
+            tableView.reloadData()
+        } else {
+            getData()
+            tableView.reloadData()
         }
     }
 }
@@ -197,4 +214,15 @@ extension MainViewController: UIImagePickerControllerDelegate {
 
 extension MainViewController: UINavigationControllerDelegate {
     
+}
+
+extension MainViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        updateTable()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateTable()
+    }
 }
