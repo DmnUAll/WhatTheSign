@@ -7,33 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		613EC56828B643FB00DF3608 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613EC56728B643FB00DF3608 /* DetailsViewController.swift */; };
 		613EC56C28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 613EC56B28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel */; };
 		61DBE5D428AA558800337A15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5D328AA558800337A15 /* AppDelegate.swift */; };
 		61DBE5D628AA558800337A15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5D528AA558800337A15 /* SceneDelegate.swift */; };
-		61DBE5D828AA558800337A15 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5D728AA558800337A15 /* MainViewController.swift */; };
-		61DBE5DB28AA558800337A15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5D928AA558800337A15 /* Main.storyboard */; };
 		61DBE5DD28AA558A00337A15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5DC28AA558A00337A15 /* Assets.xcassets */; };
-		61DBE5E028AA558A00337A15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5DE28AA558A00337A15 /* LaunchScreen.storyboard */; };
 		61DBE5EC28AA560000337A15 /* Signs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61DBE5EB28AA560000337A15 /* Signs.plist */; };
-		61DBE5EE28AA56CC00337A15 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5ED28AA56CC00337A15 /* Sign.swift */; };
-		61DBE5F028AB897600337A15 /* SignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DBE5EF28AB897600337A15 /* SignTableViewCell.swift */; };
+		61E10EC9298289F5008E68D6 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10EC8298289F5008E68D6 /* UIColor+Extensions.swift */; };
+		61E10ECB29828BC1008E68D6 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ECA29828BC1008E68D6 /* NavigationController.swift */; };
+		61E10ECD29828E39008E68D6 /* SignsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ECC29828E39008E68D6 /* SignsListView.swift */; };
+		61E10ECF29828EB7008E68D6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ECE29828EB7008E68D6 /* UIView+Extensions.swift */; };
+		61E10ED129828F21008E68D6 /* SignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED029828F21008E68D6 /* SignCell.swift */; };
+		61E10ED3298294D8008E68D6 /* SignsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED2298294D8008E68D6 /* SignsListController.swift */; };
+		61E10ED52982952D008E68D6 /* SignsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED42982952D008E68D6 /* SignsListPresenter.swift */; };
+		61E10ED72982A6F8008E68D6 /* SignInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED62982A6F8008E68D6 /* SignInfoView.swift */; };
+		61E10ED92982AA2A008E68D6 /* SignInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED82982AA2A008E68D6 /* SignInfoController.swift */; };
+		61E10EDB2982AA85008E68D6 /* SignInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10EDA2982AA85008E68D6 /* SignInfoPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		613EC56728B643FB00DF3608 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		613EC56B28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = RoadSignImageClassifier.mlmodel; sourceTree = "<group>"; };
 		61DBE5D028AA558800337A15 /* WhatTheSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatTheSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DBE5D328AA558800337A15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DBE5D528AA558800337A15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		61DBE5D728AA558800337A15 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		61DBE5DA28AA558800337A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61DBE5DC28AA558A00337A15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		61DBE5DF28AA558A00337A15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61DBE5E128AA558A00337A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61DBE5EB28AA560000337A15 /* Signs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Signs.plist; sourceTree = "<group>"; };
-		61DBE5ED28AA56CC00337A15 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
-		61DBE5EF28AB897600337A15 /* SignTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignTableViewCell.swift; sourceTree = "<group>"; };
+		61E10EC8298289F5008E68D6 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		61E10ECA29828BC1008E68D6 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		61E10ECC29828E39008E68D6 /* SignsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsListView.swift; sourceTree = "<group>"; };
+		61E10ECE29828EB7008E68D6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		61E10ED029828F21008E68D6 /* SignCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCell.swift; sourceTree = "<group>"; };
+		61E10ED2298294D8008E68D6 /* SignsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsListController.swift; sourceTree = "<group>"; };
+		61E10ED42982952D008E68D6 /* SignsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsListPresenter.swift; sourceTree = "<group>"; };
+		61E10ED62982A6F8008E68D6 /* SignInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInfoView.swift; sourceTree = "<group>"; };
+		61E10ED82982AA2A008E68D6 /* SignInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInfoController.swift; sourceTree = "<group>"; };
+		61E10EDA2982AA85008E68D6 /* SignInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInfoPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 				61DBE5E928AA55A600337A15 /* Model */,
 				61DBE5E828AA55A000337A15 /* View */,
 				61DBE5E728AA559500337A15 /* Controller */,
+				61E10EC6298289C4008E68D6 /* Presenter */,
 				61DBE5EA28AA55C600337A15 /* Support Files */,
 			);
 			path = WhatTheSign;
@@ -77,9 +86,9 @@
 		61DBE5E728AA559500337A15 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				61DBE5EF28AB897600337A15 /* SignTableViewCell.swift */,
-				61DBE5D728AA558800337A15 /* MainViewController.swift */,
-				613EC56728B643FB00DF3608 /* DetailsViewController.swift */,
+				61E10ECA29828BC1008E68D6 /* NavigationController.swift */,
+				61E10ED2298294D8008E68D6 /* SignsListController.swift */,
+				61E10ED82982AA2A008E68D6 /* SignInfoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -87,8 +96,9 @@
 		61DBE5E828AA55A000337A15 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				61DBE5D928AA558800337A15 /* Main.storyboard */,
-				61DBE5DE28AA558A00337A15 /* LaunchScreen.storyboard */,
+				61E10ED029828F21008E68D6 /* SignCell.swift */,
+				61E10ECC29828E39008E68D6 /* SignsListView.swift */,
+				61E10ED62982A6F8008E68D6 /* SignInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,7 +108,6 @@
 			children = (
 				61DBE5EB28AA560000337A15 /* Signs.plist */,
 				613EC56B28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel */,
-				61DBE5ED28AA56CC00337A15 /* Sign.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,12 +115,31 @@
 		61DBE5EA28AA55C600337A15 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				61E10EC7298289DD008E68D6 /* Helpers */,
 				61DBE5D328AA558800337A15 /* AppDelegate.swift */,
 				61DBE5D528AA558800337A15 /* SceneDelegate.swift */,
 				61DBE5DC28AA558A00337A15 /* Assets.xcassets */,
 				61DBE5E128AA558A00337A15 /* Info.plist */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		61E10EC6298289C4008E68D6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				61E10ED42982952D008E68D6 /* SignsListPresenter.swift */,
+				61E10EDA2982AA85008E68D6 /* SignInfoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		61E10EC7298289DD008E68D6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				61E10EC8298289F5008E68D6 /* UIColor+Extensions.swift */,
+				61E10ECE29828EB7008E68D6 /* UIView+Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,10 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DBE5E028AA558A00337A15 /* LaunchScreen.storyboard in Resources */,
 				61DBE5EC28AA560000337A15 /* Signs.plist in Resources */,
 				61DBE5DD28AA558A00337A15 /* Assets.xcassets in Resources */,
-				61DBE5DB28AA558800337A15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,36 +212,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DBE5D828AA558800337A15 /* MainViewController.swift in Sources */,
-				61DBE5F028AB897600337A15 /* SignTableViewCell.swift in Sources */,
 				613EC56C28B69CE600DF3608 /* RoadSignImageClassifier.mlmodel in Sources */,
+				61E10EC9298289F5008E68D6 /* UIColor+Extensions.swift in Sources */,
+				61E10ED92982AA2A008E68D6 /* SignInfoController.swift in Sources */,
+				61E10ECB29828BC1008E68D6 /* NavigationController.swift in Sources */,
+				61E10ED72982A6F8008E68D6 /* SignInfoView.swift in Sources */,
 				61DBE5D428AA558800337A15 /* AppDelegate.swift in Sources */,
-				61DBE5EE28AA56CC00337A15 /* Sign.swift in Sources */,
 				61DBE5D628AA558800337A15 /* SceneDelegate.swift in Sources */,
-				613EC56828B643FB00DF3608 /* DetailsViewController.swift in Sources */,
+				61E10ED52982952D008E68D6 /* SignsListPresenter.swift in Sources */,
+				61E10ECD29828E39008E68D6 /* SignsListView.swift in Sources */,
+				61E10ED129828F21008E68D6 /* SignCell.swift in Sources */,
+				61E10ED3298294D8008E68D6 /* SignsListController.swift in Sources */,
+				61E10EDB2982AA85008E68D6 /* SignInfoPresenter.swift in Sources */,
+				61E10ECF29828EB7008E68D6 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		61DBE5D928AA558800337A15 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61DBE5DA28AA558800337A15 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		61DBE5DE28AA558A00337A15 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61DBE5DF28AA558A00337A15 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		61DBE5E228AA558A00337A15 /* Debug */ = {
@@ -344,9 +357,9 @@
 				INFOPLIST_FILE = "WhatTheSign/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,9 +367,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ilya.WhatTheSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -372,9 +388,9 @@
 				INFOPLIST_FILE = "WhatTheSign/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,9 +398,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ilya.WhatTheSign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
