@@ -78,7 +78,7 @@
 				61DBE5E828AA55A000337A15 /* View */,
 				61DBE5E728AA559500337A15 /* Controller */,
 				61E10EC6298289C4008E68D6 /* Presenter */,
-				61DBE5EA28AA55C600337A15 /* Support Files */,
+				61DBE5EA28AA55C600337A15 /* Supporting Files */,
 			);
 			path = WhatTheSign;
 			sourceTree = "<group>";
@@ -112,7 +112,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		61DBE5EA28AA55C600337A15 /* Support Files */ = {
+		61DBE5EA28AA55C600337A15 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				61E10EC7298289DD008E68D6 /* Helpers */,
@@ -121,7 +121,7 @@
 				61DBE5DC28AA558A00337A15 /* Assets.xcassets */,
 				61DBE5E128AA558A00337A15 /* Info.plist */,
 			);
-			path = "Support Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		61E10EC6298289C4008E68D6 /* Presenter */ = {
