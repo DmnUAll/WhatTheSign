@@ -21,7 +21,6 @@
 		61E10ED52982952D008E68D6 /* SignsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED42982952D008E68D6 /* SignsListPresenter.swift */; };
 		61E10ED72982A6F8008E68D6 /* SignInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED62982A6F8008E68D6 /* SignInfoView.swift */; };
 		61E10ED92982AA2A008E68D6 /* SignInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10ED82982AA2A008E68D6 /* SignInfoController.swift */; };
-		61E10EDB2982AA85008E68D6 /* SignInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E10EDA2982AA85008E68D6 /* SignInfoPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		61E10ED42982952D008E68D6 /* SignsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsListPresenter.swift; sourceTree = "<group>"; };
 		61E10ED62982A6F8008E68D6 /* SignInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInfoView.swift; sourceTree = "<group>"; };
 		61E10ED82982AA2A008E68D6 /* SignInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInfoController.swift; sourceTree = "<group>"; };
-		61E10EDA2982AA85008E68D6 /* SignInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInfoPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				61E10ED42982952D008E68D6 /* SignsListPresenter.swift */,
-				61E10EDA2982AA85008E68D6 /* SignInfoPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -152,6 +149,7 @@
 				61DBE5CC28AA558800337A15 /* Sources */,
 				61DBE5CD28AA558800337A15 /* Frameworks */,
 				61DBE5CE28AA558800337A15 /* Resources */,
+				61CACEA829851E5800811265 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -207,6 +205,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61CACEA829851E5800811265 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61DBE5CC28AA558800337A15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -223,7 +242,6 @@
 				61E10ECD29828E39008E68D6 /* SignsListView.swift in Sources */,
 				61E10ED129828F21008E68D6 /* SignCell.swift in Sources */,
 				61E10ED3298294D8008E68D6 /* SignsListController.swift in Sources */,
-				61E10EDB2982AA85008E68D6 /* SignInfoPresenter.swift in Sources */,
 				61E10ECF29828EB7008E68D6 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,7 +372,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WTLW784B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WhatTheSign/Support Files/Info.plist";
+				INFOPLIST_FILE = "WhatTheSign/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -385,7 +403,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7WTLW784B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WhatTheSign/Support Files/Info.plist";
+				INFOPLIST_FILE = "WhatTheSign/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

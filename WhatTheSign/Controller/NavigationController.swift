@@ -11,7 +11,7 @@ final class NavigationController: UINavigationController {
 
     // MARK: - Properties and Initializers
     weak var buttonsDelegate: NavigationButtonsDelegate?
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return topViewController?.preferredStatusBarStyle ?? .default
     }
@@ -28,7 +28,7 @@ final class NavigationController: UINavigationController {
 
 // MARK: - Helpers
 extension NavigationController {
-    
+
     @objc private func infoButtonTapped() {
         buttonsDelegate?.showInfo()
     }

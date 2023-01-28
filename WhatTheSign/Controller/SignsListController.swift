@@ -2,16 +2,18 @@ import UIKit
 import CoreML
 import Vision
 
+// MARK: - SignsListController
 final class SignsListController: UIViewController {
-    
+
+    // MARK: - Properties and Initializers
     private let signsListView = SignsListView()
     private var presenter: SignsListPresenter?
     private let imagePicker = UIImagePickerController()
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Счастливого пути!"
@@ -30,8 +32,9 @@ final class SignsListController: UIViewController {
     }
 }
 
+// MARK: - Helpers
 extension SignsListController {
-    
+
     private func setupConstraints() {
         let constraints = [
             signsListView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -41,36 +44,38 @@ extension SignsListController {
         ]
         NSLayoutConstraint.activate(constraints)
     }
-    
+
     func updateSignsList(bySearch searchText: String?) {
         presenter?.applyFilter(withText: searchText)
         signsListView.tableView.reloadData()
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension SignsListController: UISearchBarDelegate {
-    
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         updateSignsList(bySearch: searchBar.text)
     }
-    
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         updateSignsList(bySearch: searchText)
     }
 }
 
+// MARK: - UITableViewDataSource
 extension SignsListController: UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let numberOfSections = presenter?.giveNumberOfSections() else { return 0}
         return numberOfSections
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         guard let title = presenter?.giveNameOfSection(section) else { return nil }
         return title
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 48)
@@ -84,31 +89,35 @@ extension SignsListController: UITableViewDataSource {
         headerView.addSubview(label)
         return headerView
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
         }
         return 48
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 54
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let numberOfRows = presenter?.giveNumberOfRows(inSection: section) else { return 0 }
         return numberOfRows
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = presenter?.configureCell(forIndexPath: indexPath, at: tableView) else { return UITableViewCell() }
+        guard let cell = presenter?.configureCell(forIndexPath: indexPath,
+                                                  at: tableView) else {
+            return UITableViewCell()
+        }
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate
 extension SignsListController: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let data = presenter?.giveSignInfo(forIndexPath: indexPath) else { return }
@@ -116,9 +125,12 @@ extension SignsListController: UITableViewDelegate {
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate
 extension SignsListController: UIImagePickerControllerDelegate {
 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
+    ) {
         if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             guard let ciimage = CIImage(image: userPickedImage) else {
                 fatalError("Не удалось конвертировать UIImage в CIImage")
@@ -129,10 +141,12 @@ extension SignsListController: UIImagePickerControllerDelegate {
     }
 
     func detectImage(image: CIImage) {
-        guard let model = try? VNCoreMLModel(for: RoadSignImageClassifier(configuration: MLModelConfiguration()).model) else {
+        guard let model = try? VNCoreMLModel(
+            for: RoadSignImageClassifier(configuration: MLModelConfiguration()).model
+        ) else {
             fatalError("Ошибка загрузки модели CoreML")
         }
-        let request = VNCoreMLRequest(model: model) { [weak self] request, error in
+        let request = VNCoreMLRequest(model: model) { [weak self] request, _ in
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Ошибка при обработке фото")
             }
@@ -152,8 +166,10 @@ extension SignsListController: UIImagePickerControllerDelegate {
     }
 }
 
+// MARK: - UINavigationControllerDelegate
 extension SignsListController: UINavigationControllerDelegate { }
 
+// MARK: - NavigationButtonsDelegate
 extension SignsListController: NavigationButtonsDelegate {
     func showInfo() {
         let alert = UIAlertController(title: "Ссылка на GitHub", message: nil, preferredStyle: .alert)
@@ -164,11 +180,17 @@ extension SignsListController: NavigationButtonsDelegate {
         controller.view.addSubview(textView)
         textView.backgroundColor = .clear
         alert.setValue(controller, forKey: "contentViewController")
-        let height: NSLayoutConstraint = NSLayoutConstraint(item: alert.view!, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 150)
+        let height: NSLayoutConstraint = NSLayoutConstraint(item: alert.view!,
+                                                            attribute: .height,
+                                                            relatedBy: .equal,
+                                                            toItem: nil,
+                                                            attribute: .notAnAttribute,
+                                                            multiplier: 1,
+                                                            constant: 150)
         alert.view.addConstraint(height)
         let attributedString = NSMutableAttributedString(string: "https://github.com/DmnUAll/WhatTheSign")
         let url = URL(string: "https://github.com/DmnUAll/WhatTheSign")
-        attributedString.setAttributes([.link: url ?? ""], range: NSMakeRange(0, attributedString.length))
+        attributedString.setAttributes([.link: url ?? ""], range: NSRange(location: 0, length: attributedString.length))
         textView.attributedText = attributedString
         textView.isUserInteractionEnabled = true
         textView.isEditable = false
@@ -177,9 +199,7 @@ extension SignsListController: NavigationButtonsDelegate {
             .foregroundColor: UIColor.white,
             .underlineStyle: NSUnderlineStyle.single.rawValue
         ]
-        let okAction = UIAlertAction(title: "OK", style: .default) {
-            UIAlertAction in
-        }
+        let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
@@ -187,6 +207,4 @@ extension SignsListController: NavigationButtonsDelegate {
     func showImagePicker() {
         present(imagePicker, animated: true, completion: nil)
     }
-    
-    
 }

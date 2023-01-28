@@ -1,22 +1,22 @@
 import UIKit
 
+// MARK: - SifnInfoController
 final class SignInfoController: UIViewController {
-    
+
+    // MARK: - Properties and Initializers
     private let signInfoView = SignInfoView()
-    private var presenter: SignInfoPresenter?
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .wtsBlue
         view.addSubview(signInfoView)
         setupConstraints()
-        presenter = SignInfoPresenter(viewController: self)
     }
-    
+
     convenience init(signInfo: [String: String]) {
         self.init()
         title = signInfo["signNumber"] ?? "Не определено"
@@ -26,8 +26,9 @@ final class SignInfoController: UIViewController {
     }
 }
 
+// MARK: - Helpers
 extension SignInfoController {
-    
+
     private func setupConstraints() {
         let constraints = [
             signInfoView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

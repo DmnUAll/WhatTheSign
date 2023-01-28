@@ -1,7 +1,9 @@
 import UIKit
 
+// MARK: - UITableViewCell
 final class SignCell: UITableViewCell {
-    
+
+    // MARK: - Properties and Initializers
     let signImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.toAutolayout()
@@ -13,11 +15,11 @@ final class SignCell: UITableViewCell {
         imageView.clipsToBounds = true
         return imageView
     }()
-    
+
     lazy var signNumberLabel = makeLabel(withAlignment: .center)
-    
+
     lazy var signNameLabel = makeLabel()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
@@ -25,20 +27,21 @@ final class SignCell: UITableViewCell {
         addSubviews()
         setupConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
+// MARK: - Helpers
 extension SignCell {
-    
+
     private func addSubviews() {
         addSubview(signImageView)
         addSubview(signNumberLabel)
         addSubview(signNameLabel)
     }
-    
+
     private func setupConstraints() {
         let constraints = [
             signImageView.heightAnchor.constraint(equalToConstant: 48),
@@ -54,7 +57,7 @@ extension SignCell {
         ]
         NSLayoutConstraint.activate(constraints)
     }
-    
+
     private func makeLabel(withAlignment alignment: NSTextAlignment = .natural) -> UILabel {
         let label = UILabel()
         label.toAutolayout()

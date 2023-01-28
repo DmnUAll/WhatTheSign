@@ -1,7 +1,9 @@
 import UIKit
 
+// MARK: - SignInfoView
 final class SignInfoView: UIView {
-    
+
+    // MARK: - Properties and Initializers
     let signImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.toAutolayout()
@@ -13,7 +15,7 @@ final class SignInfoView: UIView {
         imageView.clipsToBounds = true
         return imageView
     }()
-    
+
     let signNameLabel: UILabel = {
         let label = UILabel()
         label.toAutolayout()
@@ -23,7 +25,7 @@ final class SignInfoView: UIView {
         label.numberOfLines = 0
         return label
     }()
-    
+
     let signInfoTextView: UITextView = {
         let textView = UITextView()
         textView.toAutolayout()
@@ -38,7 +40,7 @@ final class SignInfoView: UIView {
         textView.clipsToBounds = true
         return textView
     }()
-    
+
     private let mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.toAutolayout()
@@ -48,7 +50,7 @@ final class SignInfoView: UIView {
         stackView.spacing = 8
         return stackView
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .wtsBlueLight
@@ -56,21 +58,22 @@ final class SignInfoView: UIView {
         addSubviews()
         setupConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
+// MARK: - Helpers
 extension SignInfoView {
-    
+
     private func addSubviews() {
         mainStackView.addArrangedSubview(signImageView)
         mainStackView.addArrangedSubview(signNameLabel)
         mainStackView.addArrangedSubview(signInfoTextView)
         addSubview(mainStackView)
     }
-    
+
     private func setupConstraints() {
         let constraints = [
             mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6),

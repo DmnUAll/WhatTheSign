@@ -1,7 +1,9 @@
 import UIKit
 
+// MARK: - SignsListView
 final class SignsListView: UIView {
-    
+
+    // MARK: - Properties and Initializers
     let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.toAutolayout()
@@ -13,7 +15,7 @@ final class SignsListView: UIView {
         searchBar.tintColor = .white
         return searchBar
     }()
-    
+
     let tableView: UITableView = {
         let tableView = UITableView()
         tableView.toAutolayout()
@@ -22,26 +24,27 @@ final class SignsListView: UIView {
         tableView.keyboardDismissMode = UIScrollView.KeyboardDismissMode.onDrag
         return tableView
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         toAutolayout()
         addSubviews()
         setupConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
+// MARK: - Helpers
 extension SignsListView {
-    
+
     private func addSubviews() {
         addSubview(searchBar)
         addSubview(tableView)
     }
-    
+
     private func setupConstraints() {
         let constraints = [
             searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
