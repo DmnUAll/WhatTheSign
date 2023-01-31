@@ -13,7 +13,6 @@ The app also uses machine learned to recognize signs from a photo.
 <img src="https://user-images.githubusercontent.com/82824022/215164640-80f0d0c2-51c4-4083-a11d-e8b1c236b2b2.PNG" width=30% height=30%>
 </p>
 
-This project was the fifteenth app writen by myself.\
 The main functionality that was applied in this project:
 - UIImagePickerController
 - VNCoreModel and VNCoreModelRequest
